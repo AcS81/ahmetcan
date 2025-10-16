@@ -22,8 +22,14 @@
     --transition-normal: 300ms ease;
     --transition-slow: 500ms ease-out;
 
-    --left-panel-width: 30%;
+    /* Clamp left panel width to prevent text crossing divider */
+    --left-panel-width: clamp(300px, 30vw, 500px);
+    --left-panel-min: 300px;
     --mobile-breakpoint: 768px;
+
+    /* Fixed content width for consistent line alignment */
+    --category-max-width: 600px;
+    --line-max-width: 500px;
 }
 
 /* Reset */
@@ -139,25 +145,95 @@ body {
     position: relative;
 }
 
+/* Navigation */
+.top-nav {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--color-black);
+    position: relative;
+}
+
+.nav-link {
+    color: var(--color-gray);
+    text-decoration: none;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: color var(--transition-fast);
+    position: relative;
+    padding: 0.25rem 0.5rem;
+    background: var(--color-white);
+    z-index: 1;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-black);
+}
+
+/* White gap effects on nav links to cut through any divider interference */
+.nav-link::before {
+    content: '';
+    position: absolute;
+    left: -0.5rem;
+    right: -0.5rem;
+    top: 0;
+    bottom: 0;
+    background: var(--color-white);
+    z-index: -1;
+}
+
 .category-list {
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+/* Persistent black vertical line on the left of all items */
+.category-list::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--color-black);
 }
 
 .category-item {
+    position: relative;
     display: flex;
     align-items: baseline;
     gap: var(--spacing-lg);
     padding: var(--spacing-md) 0;
-    border-bottom: 1px solid transparent;
+    padding-left: var(--spacing-sm);
     text-decoration: none;
     color: var(--color-black);
     transition: all var(--transition-normal);
 }
 
+/* White expanding line that creates gap in black line on hover */
+.category-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 0;
+    background: var(--color-white);
+    transition: height var(--transition-normal);
+    z-index: 1;
+}
+
+.category-item:hover::before {
+    height: 60%;
+}
+
 .category-item:hover {
-    padding-left: var(--spacing-sm);
-    border-bottom-color: var(--color-black);
+    padding-left: calc(var(--spacing-sm) + 0.5rem);
 }
 
 .category-name {

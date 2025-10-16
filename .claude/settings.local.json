@@ -3,7 +3,8 @@
     "allow": [
       "Read(//Users/mac/Desktop/**)",
       "Bash(tree:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(open:*)"
     ],
     "deny": [],
     "ask": []
