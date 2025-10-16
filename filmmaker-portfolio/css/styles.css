@@ -22,9 +22,7 @@
     --transition-normal: 300ms ease;
     --transition-slow: 500ms ease-out;
 
-    /* Clamp left panel width to prevent text crossing divider */
-    --left-panel-width: clamp(300px, 30vw, 500px);
-    --left-panel-min: 300px;
+    --left-panel-width: 30%;
     --mobile-breakpoint: 768px;
 
     /* Fixed content width for consistent line alignment */
@@ -72,6 +70,7 @@ body {
     flex-direction: column;
     background: var(--color-white);
     border-right: 1px solid var(--color-black);
+    overflow-y: auto;
 }
 
 .site-title {
@@ -99,14 +98,18 @@ body {
     margin-top: var(--spacing-xs);
 }
 
-/* Preview Container */
+/* Preview Container - Fixed on far right */
 .preview-container {
-    flex: 1;
-    position: relative;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 25%;
+    height: 100vh;
     background: var(--color-black);
     overflow: hidden;
     opacity: 0;
     transition: opacity var(--transition-slow);
+    z-index: 100;
 }
 
 .preview-container.active {
@@ -145,47 +148,16 @@ body {
     position: relative;
 }
 
-/* Navigation */
-.top-nav {
+/* Category List - Now in left panel */
+.left-panel .category-list {
     display: flex;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
-    padding-bottom: var(--spacing-sm);
-    border-bottom: 1px solid var(--color-black);
+    flex-direction: column;
     position: relative;
+    flex: 1;
 }
 
-.nav-link {
-    color: var(--color-gray);
-    text-decoration: none;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: color var(--transition-fast);
-    position: relative;
-    padding: 0.25rem 0.5rem;
-    background: var(--color-white);
-    z-index: 1;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: var(--color-black);
-}
-
-/* White gap effects on nav links to cut through any divider interference */
-.nav-link::before {
-    content: '';
-    position: absolute;
-    left: -0.5rem;
-    right: -0.5rem;
-    top: 0;
-    bottom: 0;
-    background: var(--color-white);
-    z-index: -1;
-}
-
-.category-list {
+/* Keep original styles for category list in right panel (for detail pages) */
+.right-panel .category-list {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -202,7 +174,21 @@ body {
     background: var(--color-black);
 }
 
-.category-item {
+/* Category items in left panel */
+.left-panel .category-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) 0;
+    padding-left: var(--spacing-sm);
+    text-decoration: none;
+    color: var(--color-black);
+    transition: all var(--transition-normal);
+}
+
+/* Keep original styles for category items in right panel */
+.right-panel .category-item {
     position: relative;
     display: flex;
     align-items: baseline;
@@ -236,7 +222,15 @@ body {
     padding-left: calc(var(--spacing-sm) + 0.5rem);
 }
 
-.category-name {
+/* Category names in left panel */
+.left-panel .category-name {
+    font-size: 1.125rem;
+    font-weight: 400;
+    transition: font-weight var(--transition-fast);
+}
+
+/* Keep original styles for category names in right panel */
+.right-panel .category-name {
     font-size: 1.5rem;
     font-weight: 400;
     min-width: 160px;
@@ -247,14 +241,30 @@ body {
     font-weight: 500;
 }
 
-.category-right {
+/* Category right section in left panel */
+.left-panel .category-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+/* Keep original styles for category right in right panel */
+.right-panel .category-right {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
     margin-left: auto;
 }
 
-.category-meta {
+/* Category meta in left panel */
+.left-panel .category-meta {
+    font-size: 0.75rem;
+    color: var(--color-gray);
+    white-space: nowrap;
+}
+
+/* Keep original styles for category meta in right panel */
+.right-panel .category-meta {
     font-size: 0.875rem;
     color: var(--color-gray);
     white-space: nowrap;
