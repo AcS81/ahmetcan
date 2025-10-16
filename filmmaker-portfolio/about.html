@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - London Filmmaker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left Panel - Fixed -->
+        <aside class="left-panel">
+            <h1 class="site-title">
+                <span class="title-main">FILMS</span>
+                <span class="title-sub">by London Filmmaker</span>
+            </h1>
+
+            <!-- About Visual -->
+            <div class="about-visual">
+                <div class="visual-text">
+                    <span class="visual-line">Cinema</span>
+                    <span class="visual-line">×</span>
+                    <span class="visual-line">Digital</span>
+                    <span class="visual-line">×</span>
+                    <span class="visual-line">Speed</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Panel - Content -->
+        <main class="right-panel">
+            <!-- Navigation -->
+            <nav class="top-nav">
+                <a href="index.html" class="nav-link">Index</a>
+                <a href="about.html" class="nav-link active">About</a>
+            </nav>
+
+            <!-- About Content -->
+            <section class="about-content">
+                <div class="about-intro">
+                    <h2>London filmmaker. Global stories. Same-day delivery.</h2>
+                    <p class="lead-text">
+                        I create visual narratives that move at the speed of modern business.
+                        From viral social content to cinema-quality productions, delivered when you need them.
+                    </p>
+                </div>
+
+                <div class="about-section">
+                    <h3>The Approach</h3>
+                    <p>
+                        Traditional video production is broken. Weeks of waiting, inflated budgets,
+                        and content that's already outdated by delivery. I've rebuilt the process
+                        from the ground up.
+                    </p>
+                    <p>
+                        <strong>Film in the morning. Edit in the afternoon. Deliver by evening.</strong>
+                    </p>
+                    <p>
+                        This isn't about cutting corners – it's about cutting through the noise.
+                        Using cinema-grade equipment and a decade of experience, I deliver professional
+                        content at the pace your business actually moves.
+                    </p>
+                </div>
+
+                <div class="about-section">
+                    <h3>Services</h3>
+                    <div class="services-grid">
+                        <div class="service-block">
+                            <h4>Same-Day Business Videos</h4>
+                            <p>Professional marketing content filmed and delivered within 24 hours. Fixed pricing. No surprises.</p>
+                            <span class="service-price">From £750</span>
+                        </div>
+                        <div class="service-block">
+                            <h4>Social-First Content</h4>
+                            <p>Vertical videos optimized for TikTok, Reels, and Shorts. Built for algorithms, designed to go viral.</p>
+                            <span class="service-price">From £500</span>
+                        </div>
+                        <div class="service-block">
+                            <h4>Music Videos</h4>
+                            <p>Full production from concept to color grade. Working with emerging and established artists.</p>
+                            <span class="service-price">On request</span>
+                        </div>
+                        <div class="service-block">
+                            <h4>Documentary Films</h4>
+                            <p>Long-form storytelling that captures truth. From single interviews to feature-length productions.</p>
+                            <span class="service-price">On request</span>
+                        </div>
+                        <div class="service-block">
+                            <h4>Travel Packages</h4>
+                            <p>Worldwide shoots with quick turnaround. Capture your destination with cinematic quality.</p>
+                            <span class="service-price">From £2,000</span>
+                        </div>
+                        <div class="service-block">
+                            <h4>Event Coverage</h4>
+                            <p>Multi-camera production for conferences, performances, and brand activations.</p>
+                            <span class="service-price">From £1,500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h3>The Gear</h3>
+                    <p>
+                        Sony FX6 cinema camera. GM glass. DJI aerials. Wireless audio.
+                        LED panels. Everything needed to match any production requirement,
+                        packed into cases that fit in an Uber.
+                    </p>
+                    <a href="index.html#gear" class="text-link">View full gear list →</a>
+                </div>
+
+                <div class="about-section">
+                    <h3>The Promise</h3>
+                    <ul class="promise-list">
+                        <li>No hidden fees or surprise costs</li>
+                        <li>Delivery when promised, every time</li>
+                        <li>Cinema quality, startup speed</li>
+                        <li>Rights to all footage included</li>
+                        <li>Optimized for every platform</li>
+                    </ul>
+                </div>
+
+                <div class="contact-section">
+                    <h3>Ready to move fast?</h3>
+                    <p>Available for same-day shoots in London. Worldwide with 48hr notice.</p>
+                    <div class="contact-buttons">
+                        <a href="mailto:films@london.com" class="contact-btn primary">Book Same-Day Shoot</a>
+                        <a href="tel:+447000000000" class="contact-btn">Call Direct</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank">Instagram</a>
+                        <a href="https://vimeo.com" target="_blank">Vimeo</a>
+                        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+    </button>
+
+    <style>
+        /* About Page Specific Styles */
+        .about-visual {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #000 0%, #333 100%);
+        }
+
+        .visual-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+        }
+
+        .visual-line {
+            margin: 0.5rem 0;
+            animation: fadeInOut 6s infinite;
+        }
+
+        .visual-line:nth-child(2n) {
+            font-size: 1rem;
+            opacity: 0.5;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .about-intro {
+            margin-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 1px solid var(--color-black);
+        }
+
+        .about-intro h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .lead-text {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: var(--color-gray);
+        }
+
+        .about-section {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .about-section h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .about-section p {
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .service-block {
+            padding: var(--spacing-md);
+            border: 1px solid var(--color-black);
+            transition: all var(--transition-normal);
+        }
+
+        .service-block:hover {
+            background: var(--color-black);
+            color: var(--color-white);
+        }
+
+        .service-block h4 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .service-block p {
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .service-price {
+            font-weight: 600;
+            color: var(--color-accent);
+        }
+
+        .service-block:hover .service-price {
+            color: var(--color-white);
+        }
+
+        .text-link {
+            color: var(--color-black);
+            text-decoration: underline;
+            transition: opacity var(--transition-fast);
+        }
+
+        .text-link:hover {
+            opacity: 0.6;
+        }
+
+        .promise-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .promise-list li {
+            padding: var(--spacing-sm) 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .promise-list li:before {
+            content: "✓";
+            margin-right: var(--spacing-sm);
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+
+        .contact-section {
+            margin-top: var(--spacing-xl);
+            padding: var(--spacing-lg);
+            background: var(--color-light-gray);
+            text-align: center;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            margin: var(--spacing-md) 0;
+        }
+
+        .contact-btn {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 2px solid var(--color-black);
+            background: transparent;
+            color: var(--color-black);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all var(--transition-normal);
+        }
+
+        .contact-btn:hover {
+            background: var(--color-black);
+            color: var(--color-white);
+        }
+
+        .contact-btn.primary {
+            background: var(--color-accent);
+            color: var(--color-white);
+            border-color: var(--color-accent);
+        }
+
+        .contact-btn.primary:hover {
+            background: var(--color-black);
+            border-color: var(--color-black);
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            margin-top: var(--spacing-md);
+        }
+
+        .social-links a {
+            color: var(--color-gray);
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: var(--color-black);
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .about-visual {
+                display: none;
+            }
+
+            .about-intro h2 {
+                font-size: 1.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

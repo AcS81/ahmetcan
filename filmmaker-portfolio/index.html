@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films - London Filmmaker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left Panel - Fixed -->
+        <aside class="left-panel">
+            <h1 class="site-title">
+                <span class="title-main">FILMS</span>
+                <span class="title-sub">by London Filmmaker</span>
+            </h1>
+
+            <!-- Preview Container - Shows on hover -->
+            <div class="preview-container" id="preview-container">
+                <video class="preview-video" id="preview-video" muted loop playsinline></video>
+                <div class="preview-placeholder">
+                    <span class="preview-text">Hover to preview</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Panel - Content -->
+        <main class="right-panel">
+            <!-- Navigation -->
+            <nav class="top-nav">
+                <a href="index.html" class="nav-link active">Index</a>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+
+            <!-- Index Content -->
+            <section class="index-content">
+                <div class="category-list">
+                    <a href="#music-videos" class="category-item"
+                       data-preview="/videos/music-preview.mp4"
+                       data-description="Director & Cinematographer">
+                        <span class="category-name">Music Videos</span>
+                        <span class="category-meta">12 projects</span>
+                        <span class="hover-indicator">→</span>
+                    </a>
+
+                    <a href="#documentary" class="category-item"
+                       data-preview="/videos/doc-preview.mp4"
+                       data-description="Long-form storytelling">
+                        <span class="category-name">Documentary</span>
+                        <span class="category-meta">8 films</span>
+                        <span class="hover-indicator">→</span>
+                    </a>
+
+                    <a href="#narratives" class="category-item"
+                       data-preview="/videos/narrative-preview.mp4"
+                       data-description="Short films & features">
+                        <span class="category-name">Narratives</span>
+                        <span class="category-meta">5 films</span>
+                        <span class="hover-indicator">→</span>
+                    </a>
+
+                    <a href="#travel" class="category-item service-item"
+                       data-preview="/videos/travel-preview.mp4"
+                       data-description="Worldwide shoots">
+                        <span class="category-name">Travel Packages</span>
+                        <span class="category-meta">From £2,000</span>
+                        <span class="hover-indicator">→</span>
+                    </a>
+
+                    <a href="#short-videos" class="category-item service-item"
+                       data-preview="/videos/social-preview.mp4"
+                       data-description="Social-first content">
+                        <span class="category-name">Short Videos</span>
+                        <span class="category-meta">24hr delivery</span>
+                        <span class="hover-indicator">→</span>
+                        <span class="badge-new">NEW</span>
+                    </a>
+
+                    <a href="#business" class="category-item service-item"
+                       data-preview="/videos/business-preview.mp4"
+                       data-description="Film & deliver same day">
+                        <span class="category-name">Business Marketing</span>
+                        <span class="category-meta">Same day • £750</span>
+                        <span class="hover-indicator">→</span>
+                        <span class="badge-same-day">SAME DAY</span>
+                    </a>
+
+                    <a href="#events" class="category-item"
+                       data-preview="/videos/event-preview.mp4"
+                       data-description="Multi-camera coverage">
+                        <span class="category-name">Event Videos</span>
+                        <span class="category-meta">15 events</span>
+                        <span class="hover-indicator">→</span>
+                    </a>
+
+                    <a href="#gear" class="category-item"
+                       data-description="Professional equipment">
+                        <span class="category-name">Gear List</span>
+                        <span class="category-meta">Cinema-grade</span>
+                        <span class="hover-indicator">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Category Detail Sections (Hidden by default) -->
+            <section id="music-videos" class="category-detail">
+                <header class="detail-header">
+                    <button class="back-btn">← Back</button>
+                    <h2>Music Videos</h2>
+                </header>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-thumb" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                        <h3>Artist Name - Track Title</h3>
+                        <p>Director, Cinematographer</p>
+                        <span class="year">2024</span>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-thumb" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                        <h3>Band Name - Song</h3>
+                        <p>Full Production</p>
+                        <span class="year">2024</span>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-thumb" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                        <h3>Solo Artist - Single</h3>
+                        <p>Creative Director</p>
+                        <span class="year">2023</span>
+                    </article>
+                </div>
+            </section>
+
+            <section id="business" class="category-detail">
+                <header class="detail-header">
+                    <button class="back-btn">← Back</button>
+                    <h2>Business Marketing</h2>
+                </header>
+                <div class="service-content">
+                    <div class="service-hero">
+                        <h3>Same-Day Professional Video</h3>
+                        <p class="service-tagline">Film in the morning. Edit in the afternoon. Deliver by evening.</p>
+                    </div>
+
+                    <div class="service-features">
+                        <div class="feature-card">
+                            <span class="feature-icon">⚡</span>
+                            <h4>Lightning Fast</h4>
+                            <p>Complete video production in one day</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-icon">💰</span>
+                            <h4>Fixed Pricing</h4>
+                            <p>Half day: £750 | Full day: £1,250</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-icon">📱</span>
+                            <h4>Multi-Platform</h4>
+                            <p>Optimized for all social media</p>
+                        </div>
+                    </div>
+
+                    <div class="cta-section">
+                        <a href="mailto:films@london.com" class="cta-button">Book Same-Day Shoot</a>
+                        <p class="availability">Next available: Tomorrow</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Add more category detail sections as needed -->
+        </main>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
