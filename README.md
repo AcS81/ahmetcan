@@ -1,18 +1,17 @@
-# ahmetcan
+# Ahmet Can — Portfolio Site
 
-Welcome to the ahmetcan repository!
+Static website for London-based filmmaker Ahmet Can. The site highlights
+capabilities across music videos, documentaries, narratives, and agile branded
+content, with an about page outlining process and values.
 
-## Getting Started
+## Structure
 
-This repository is ready for development. Add your project files and documentation here.
+- `index.html` – Landing page with tabbed work categories and contact CTA.
+- `about.html` – Background, approach, and contact information.
+- `styles.css` – Global typography, layout, and component styles.
+- `scripts.js` – Accessible tab interactions and footer year update.
 
-## Contributing
+## Development
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## License
-
-Add your license information here.
+Open `index.html` in your preferred browser to preview locally. No build step is
+required.
